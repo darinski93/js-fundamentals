@@ -1,0 +1,27 @@
+//lastKNumbersSequence
+
+function lastKNumbersSequence(n, k) {
+
+    let firstEl = [1];
+
+
+    for (let i = 0; i < n - 1; i++) {
+
+        let start = firstEl.slice(-k)
+
+        let sum = 0
+        for (let el of start) {
+
+         
+              sum += el
+            
+        }
+        firstEl.push(sum)
+
+    }
+    console.log(firstEl.join(' '))
+
+
+
+}
+lastKNumbersSequence(6, 3)
